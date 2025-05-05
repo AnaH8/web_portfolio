@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ana's Web Portfolio</title>
+    <link rel="stylesheet" href="./styles.css"/>
+    <link rel="stylesheet" href="./fanta.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <a href="/">Ana H</a>
+        <nav>
+            <a target="_blank" href="https://www.linkedin.com/in/anamaria-herbel/"><i class="fa-brands fa-linkedin"></i></a>
+            <a target="_blank" href="https://github.com/AnaH8"><i class="fa-brands fa-github"></i></a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <div class="intro-header">
+                <h1>Hello! I'm Ana...</h1>
+                <p>Software Developer</p>
+            </div>
+            <h5 class="intro-description">An electronics engineer by qualification with a passion for software development. Based in Romania, I love to read, practice yoga and to build out all sorts of fun and useful internet applications!</h5>
+            <div class="links-container">
+                <i class="fa-solid link-arrow fa-arrow-right-long"></i>
+                <a href="mailto:anamariaherbel@gmail.com">Email me</a>
+                <a target="_blank" href="https://www.linkedin.com/in/anamaria-herbel/">LinkedIn</a>
+                <a target="_blank" href="https://github.com/AnaH8">GitHub</a>
+            </div>
+            
+            <div id="play-game">
+                <button onclick="playGame()">Play game??</button>
+            </div>
+            <div style="display: none;" class="color-div">
+                <h4>Pick a color</h4>
+                <p style="display: none;">Great...now it's ruined</p>
+                <input type="color" id="color-picker" onchange="changeColor()" value="#0084ff"/>
+                <button style="display: none;" onclick="resetColor()">Reset</button>
+            </div>
+        </section>
+
+        <section>
+            <h2>Skills</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Area</th>
+                        <th>Technologies</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>JavaScript</td>
+                        <td>ReactJS | NextJS | NodeJS & Express.JS</td>
+                    </tr>
+                    <tr>
+                        <td>Web</td>
+                        <td>PostgreSQL | APIs | TailwindCSS | Git</td>
+                    </tr>
+                    <tr>
+                        <td>Design</td>
+                        <td>Canva  | Pixlr </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Latest Projects</h2>
+            <div class="cards-grid">
+                <div class="project-card">
+                    <div>
+                        <p>Apr 15, 2025</p>
+                        <h4>Food Repo</h4>
+                        <div class="tech-list">
+                            <div class="card-button-secondary">
+                                <p>NextJS</p>
+                            </div>
+                            <div class="card-button-secondary">
+                                <p>TailwindCSS</p>
+                            </div>
+                            <div class="card-button-secondary">
+                                <p>TheMealDB API</p>
+                            </div>
+                        </div>
+                        <p>Food Repo is a tool that makes finding recipes simple and effective.</p>
+                        <div class="project-links">
+                            <a target="_blank" href="https://food-repository.netlify.app/">Live</a>
+                            <a target="_blank" href="https://github.com/AnaH8/food-repo">GitHub</a>
+                        </div>
+                    </div>
+                    <div class="img-div">
+                        <img class="big-img" src="./public/food-repo.JPG" alt="project-thumbnail"/>
+                    </div>
+                </div>
+
+
+
+                <div class="project-card">
+                    <div>
+                        <p>Apr 3, 2025</p>
+                        <h4>NASA APOD Project</h4>
+                        <div class="tech-list">
+                            <div class="card-button-secondary">
+                                <p>ReactJS</p>
+                            </div>
+                            <div class="card-button-secondary">
+                                <p>CSS</p>
+                            </div>
+                            <div class="card-button-secondary">
+                                <p>NASA API</p>
+                            </div>
+                        </div>
+                        <p>Get Nasa's picture of the day (or video) OR search picture by date</p>
+                        <div class="project-links">
+                            <a target="_blank" href="https://apod-api-app-reactjs.netlify.app/">Live</a>
+                            <a target="_blank" href="https://github.com/AnaH8/4.-Nasa-API-React-App">GitHub</a>
+                        </div>
+                    </div>
+                    <div class="img-div">
+                        <img class="big-img" src="./public/nasa-apod.JPG" alt="project-thumbnail"/>
+                    </div>
+                </div>
+
+
+                <div class="project-card">
+                    <div>
+                        <p>Mar 25, 2025</p>
+                        <h4>Fundog Store</h4>
+                        <div class="tech-list">
+                            <div class="card-button-secondary">
+                                <p>NextJS</p>
+                            </div>
+                            <div class="card-button-secondary">
+                                <p>CSS</p>
+                            </div>
+                            <div class="card-button-secondary">
+                                <p>Stripe API</p>
+                            </div>
+                        </div>
+                        <p>A full stack E-Commerce store with secure payments using Stripe</p>
+                        <div class="project-links">
+                            <!-- <a target="_blank" href="/">Live</a> -->
+                            <a target="_blank" href="https://github.com/AnaH8/5_e_store">GitHub</a>
+                        </div>
+                    </div>
+                    <div class="img-div">
+                        <img class="big-img" src="./public/fundog-store.JPG" alt="project-thumbnail"/>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div>
+                        <p>Jan 29, 2025</p>
+                        <h4>The Booklog</h4>
+                        <div class="tech-list">
+                            <div class="card-button-secondary">
+                                <p>Node.js</p>
+                            </div>
+                            <div class="card-button-secondary">
+                                <p>Express.js</p>
+                            </div>
+                            <div class="card-button-secondary">
+                                <p>PostgreSQL</p>
+                            </div>
+                            <div class="card-button-secondary">
+                                <p>Open Library Covers API</p>
+                            </div>
+                        </div>
+                        <p>Web app where you can keep track of read books</p>
+                        <div class="project-links">
+                            <!-- <a target="_blank" href="/">Live</a> -->
+                            <a target="_blank" href="https://github.com/AnaH8/the-booklog">GitHub</a>
+                        </div>
+                    </div>
+                    <div class="img-div">
+                        <img class="big-img" src="./public/booklog.JPG" alt="project-thumbnail"/>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>   
+
+    <footer>
+        <p>By <a target="_blank" href="https://github.com/AnaH8">Ana</a>🤍</p>
+    </footer>
+
+    <script>
+        //interactivity for the color switching game
+
+        const body = document.querySelector('body')
+        const colorInput = document.getElementById('color-picker')
+        const colorDiv = document.querySelector('.color-div')
+        const hiddenText = document.querySelector('.color-div p')
+        const resetBtn = document.querySelector('.color-div button')
+        const playBtn = document.getElementById('play-game')
+
+        function playGame(){
+            //showing the color selector input
+            colorDiv.style.display = 'block'
+            playBtn.style.display = 'none'
+        }
+
+        function changeColor() {
+            //take user selected color and assign it to website background color
+            const selectedColor = colorInput.value
+            body.style.background = selectedColor
+            resetBtn.style.display = 'block'
+            hiddenText.style.display = 'block'
+            colorInput.style.display = 'none'
+        }
+
+        function resetColor(){
+            body.style.background = 'white'
+            colorInput.style.display = 'block'
+            playBtn.style.display = 'block'
+            hiddenText.style.display = 'none'
+            resetBtn.style.display = 'none'
+            colorDiv.style.display = 'none'
+            
+        }
+
+    </script>
+</body>
+</html>
